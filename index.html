@@ -70,15 +70,14 @@
   .step p{color:var(--soft);font-size:14.5px;margin:0}
   .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:44px}
   .card .thumb{aspect-ratio:16/10;border-radius:14px;background:radial-gradient(120% 120% at 20% 15%,#E4DAC3 0%,#D8CDB2 55%,#CDC0A2 100%);
-    border:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
-  .card .thumb svg{width:48px;height:48px;color:#2B2723;opacity:.5}
+    border:1px solid var(--rule);overflow:hidden}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .card h3{font-size:22px;margin:20px 0 4px}
   .card span{color:var(--soft);font-size:14px}
   .ppl{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:44px;max-width:760px}
   .person{display:flex;align-items:center;gap:22px}
-  .avatar{width:96px;height:96px;border-radius:50%;flex:0 0 auto;background:radial-gradient(80% 80% at 50% 35%,#DED3BC,#CFC3A7);
-    border:1px solid var(--rule);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-  .avatar svg{width:60px;height:60px;color:#2B2723;opacity:.3;transform:translateY(6px)}
+  .avatar{width:96px;height:96px;border-radius:50%;flex:0 0 auto;object-fit:cover;
+    object-position:center 22%;background:radial-gradient(80% 80% at 50% 35%,#DED3BC,#CFC3A7);border:1px solid var(--rule);display:block}
   .person h3{font-size:22px;margin:0 0 2px}
   .person span{color:var(--soft);font-size:14.5px}
   .partners .foot{margin-top:38px;color:var(--soft)}
@@ -143,12 +142,12 @@
   <section class="divide" aria-label="The work"><div class="wrap">
     <p class="kicker">The work</p>
     <h2 style="font-size:clamp(28px,4vw,46px)">What we build.</h2>
-    <div class="work-grid"><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="10" width="34" height="28" rx="2"/><path d="M7 17h34M12 24h12M12 29h18"/></svg></div><h3>Websites</h3><span>Design &amp; build</span></div><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="12" width="32" height="24" rx="2"/><path d="M8 15l16 12 16-12"/></svg></div><h3>Email programs</h3><span>Lifecycle &amp; campaigns</span></div><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="21" cy="21" r="11"/><path d="M29 29l9 9"/></svg></div><h3>SEO foundations</h3><span>Technical &amp; content</span></div></div>
+    <div class="work-grid"><div class="card"><div class="thumb"><img src="assets/work-1.jpg" alt="Websites — Design &amp; build" loading="lazy"></div><h3>Websites</h3><span>Design &amp; build</span></div><div class="card"><div class="thumb"><img src="assets/work-2.jpg" alt="Email programs — Lifecycle &amp; campaigns" loading="lazy"></div><h3>Email programs</h3><span>Lifecycle &amp; campaigns</span></div><div class="card"><div class="thumb"><img src="assets/work-3.jpg" alt="SEO foundations — Technical &amp; content" loading="lazy"></div><h3>SEO foundations</h3><span>Technical &amp; content</span></div></div>
   </div></section>
   <section id="studio" class="partners divide" aria-label="Who you work with"><div class="wrap">
     <p class="kicker">Who you work with</p>
     <h2 style="font-size:clamp(28px,4vw,46px)">You work with the partners. Every time.</h2>
-    <div class="ppl"><div class="person"><span class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="18" r="9"/><path d="M8 44c1-9 8-14 16-14s15 5 16 14z"/></svg></span><div><h3>Marco Neri</h3><span>Founder</span></div></div><div class="person"><span class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="18" r="9"/><path d="M8 44c1-9 8-14 16-14s15 5 16 14z"/></svg></span><div><h3>Elena Ricci</h3><span>Partner</span></div></div></div>
+    <div class="ppl"><div class="person"><img class="avatar" src="assets/team-1.jpg" alt="Marco Neri, Founder" loading="lazy"><div><h3>Marco Neri</h3><span>Founder</span></div></div><div class="person"><img class="avatar" src="assets/team-2.jpg" alt="Elena Ricci, Partner" loading="lazy"><div><h3>Elena Ricci</h3><span>Partner</span></div></div></div>
     <p class="foot">The partners are on your project from the first sketch to the last detail.</p>
   </div></section>
   <section class="faq divide" aria-label="FAQ"><div class="wrap">
