@@ -3,43 +3,177 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pietra Nero</title>
-<meta name="description" content="Pietra Nero — stone, surfaces, and architectural finishes.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Crect x='7' y='7' width='18' height='18' fill='%23e8e6e1'/%3E%3Crect x='7' y='7' width='9' height='18' fill='%23111'/%3E%3C/svg%3E">
+<title>Pietra Nero — A digital studio built on craft</title>
+<meta name="description" content="Pietra Nero is a small digital studio building web, SEO, and email with craft. A few brands a year, built by the partners.">
+<meta name="theme-color" content="#2B2723">
+<meta property="og:title" content="Pietra Nero — Growth, engineered.">
+<meta property="og:description" content="Pietra Nero is a small digital studio building web, SEO, and email with craft. A few brands a year, built by the partners.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:#111110;color:#e8e6e1;font:400 17px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 36px}
-  header{display:flex;justify-content:space-between;align-items:center;padding:38px 0}
-  .logo{font-size:15px;letter-spacing:.34em;text-transform:uppercase;color:#f3f1ec;font-weight:600}
-  .logo b{color:#8a8880;font-weight:600}
-  .hd-r{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#7d7b74}
-  .hero{padding:11vh 0 12vh}
-  h1{font-size:clamp(46px,11vw,128px);line-height:.92;font-weight:600;letter-spacing:-.03em;color:#f4f2ed}
-  h1 span{color:#6f6d66}
-  .it{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(18px,2.4vw,24px);color:#b7b4ac;margin-top:34px;max-width:46ch}
-  .row{display:flex;gap:56px;flex-wrap:wrap;border-top:1px solid #2a2926;padding-top:38px;margin-top:8vh}
-  .row div{max-width:280px}
-  .row h2{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#8a8880;margin-bottom:10px}
-  .row p{font-size:15px;color:#c3c0b8}
-  footer{border-top:1px solid #2a2926;padding:30px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px;color:#7d7b74;letter-spacing:.02em}
-  footer a{color:#e8e6e1;text-decoration:none;border-bottom:1px solid #4a4844}
-  @media(max-width:560px){.row{gap:28px}}
+  :root{
+    --ground:#EFE9DA;--ground2:#E7E0CE;--text:#2B2723;--soft:#5A544B;
+    --accent:#A9803A;--line:#B08D57;--rule:#DCD5C4;--kicker:#A9803A;
+    --maxw:1180px;--display:"Playfair Display",Georgia,serif;--body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ground);color:var(--text);font-family:var(--body);
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.01em}
+  a{color:inherit}
+  .kicker{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--kicker);margin:0 0 22px}
+  .sub{color:var(--soft);font-size:18px;max-width:52ch}
+  .btn{display:inline-block;font-family:var(--body);font-weight:500;font-size:15px;
+    padding:12px 26px;border-radius:999px;text-decoration:none;transition:.18s ease}
+  .btn--solid{background:var(--accent);color:#fff}
+  .btn--solid:hover{filter:brightness(1.06)}
+  .btn--ghost{border:1.5px solid var(--accent);color:var(--accent)}
+  .btn--ghost:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .link{color:var(--accent);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px}
+  .link:hover{gap:12px}
+  .link svg{transition:transform .18s ease}.link:hover svg{transform:translateX(3px)}
+  section{padding:104px 0}
+  .divide{border-top:1px solid var(--rule)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  header{position:sticky;top:0;z-index:10;background:rgba(239,233,218,.86);
+    backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent}
+  header.scrolled{border-bottom-color:var(--rule)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{font-family:var(--display);font-size:26px;font-weight:500;letter-spacing:-.01em;text-decoration:none}
+  .nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+  .nav a.navlink{text-decoration:none;font-size:15px;color:var(--text);opacity:.82}
+  .nav a.navlink:hover{opacity:1}
+  .nav .right{display:flex;align-items:center;gap:30px}
+  .hero{padding:132px 0 128px;text-align:center}
+  .hero h1{font-size:clamp(48px,8vw,104px);letter-spacing:-.02em}
+  .hero .sub{margin:26px auto 34px;font-size:20px;text-align:center}
+  .position{text-align:center}
+  .position h2{font-size:clamp(30px,4.4vw,52px);max-width:22ch;margin:0 auto}
+  .position .sub{margin:20px auto 0;text-align:center}
+  .position .rule{height:1px;background:var(--accent);max-width:520px;margin:52px auto 0;opacity:.65}
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px}
+  .svc{padding:0 40px}
+  .svc + .svc{border-left:1px solid var(--rule)}
+  .svc .glyph{width:44px;height:44px;color:var(--text);margin-bottom:26px}
+  .svc h3{font-size:27px;margin-bottom:14px}
+  .svc p{color:var(--soft);margin:0;font-size:15.5px;max-width:34ch}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px}
+  .step{padding:0 30px}
+  .step + .step{border-left:1px solid var(--rule)}
+  .step .num{font-family:var(--display);font-size:52px;color:var(--accent);line-height:1;font-weight:400}
+  .step h3{font-size:22px;margin:14px 0 10px}
+  .step p{color:var(--soft);font-size:14.5px;margin:0}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:44px}
+  .card .thumb{aspect-ratio:16/10;border-radius:14px;background:radial-gradient(120% 120% at 20% 15%,#E4DAC3 0%,#D8CDB2 55%,#CDC0A2 100%);
+    border:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
+  .card .thumb svg{width:48px;height:48px;color:#2B2723;opacity:.5}
+  .card h3{font-size:22px;margin:20px 0 4px}
+  .card span{color:var(--soft);font-size:14px}
+  .ppl{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:44px;max-width:760px}
+  .person{display:flex;align-items:center;gap:22px}
+  .avatar{width:96px;height:96px;border-radius:50%;flex:0 0 auto;background:radial-gradient(80% 80% at 50% 35%,#DED3BC,#CFC3A7);
+    border:1px solid var(--rule);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+  .avatar svg{width:60px;height:60px;color:#2B2723;opacity:.3;transform:translateY(6px)}
+  .person h3{font-size:22px;margin:0 0 2px}
+  .person span{color:var(--soft);font-size:14.5px}
+  .partners .foot{margin-top:38px;color:var(--soft)}
+  .faq h2{font-size:clamp(28px,4vw,46px);margin-bottom:14px}
+  .acc{border-top:1px solid var(--rule);margin-top:34px}
+  .acc details{border-bottom:1px solid var(--rule)}
+  .acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:26px 4px;font-family:var(--display);font-size:23px;font-weight:500}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary .pm{color:var(--accent);font-family:var(--body);font-size:26px;line-height:1;
+    transition:transform .2s ease;flex:0 0 auto}
+  .acc details[open] summary .pm{transform:rotate(45deg)}
+  .acc .body{padding:0 4px 26px;color:var(--soft);max-width:64ch;margin-top:-6px}
+  .closing{text-align:center;padding:120px 0 96px}
+  .closing h2{font-size:clamp(38px,6vw,72px)}
+  .closing .btn{margin:34px 0 20px}
+  .closing .email{color:var(--soft);font-size:15px}
+  .closing .email a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--rule)}
+  footer{background:var(--ground2);border-top:1px solid var(--rule)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:30px;align-items:start;padding:56px 0}
+  footer .brand{font-size:24px}
+  .fcol h4{font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--kicker);margin:0 0 16px;font-weight:600}
+  .fcol a{display:block;text-decoration:none;color:var(--text);opacity:.8;font-size:15px;margin-bottom:10px}
+  .fcol a:hover{opacity:1}
+  .legal{border-top:1px solid var(--rule);padding:22px 0;color:var(--soft);font-size:13px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media(max-width:860px){
+    section{padding:76px 0}
+    .cols3,.steps,.work-grid,.ppl{grid-template-columns:1fr}
+    .svc{padding:32px 0}.svc + .svc{border-left:0;border-top:1px solid var(--rule)}
+    .step{padding:26px 0}.step + .step{border-left:0;border-top:1px solid var(--rule)}
+    .nav ul,.nav .right .navlink{display:none}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header><span class="logo">Pietra&nbsp;<b>Nero</b></span><span class="hd-r">Superfici · Pietra naturale</span></header>
-  <section class="hero">
-    <h1>Stone,<br>worked to a <span>line.</span></h1>
-    <p class="it">Superfici in pietra naturale — natural stone surfaces and architectural finishes, cut and set with a designer's eye.</p>
-    <div class="row">
-      <div><h2>Superfici</h2><p>Kitchen and bath surfaces, floors, and cladding in marble, travertine, and basalt.</p></div>
-      <div><h2>Su misura</h2><p>Bespoke stonework for architects and interiors — measured, templated, and installed.</p></div>
-      <div><h2>Studio</h2><p>A small atelier. We take a limited number of projects to keep the work exact.</p></div>
-    </div>
+<header id="hdr"><div class="wrap nav">
+  <a class="brand" href="#top">Pietra Nero</a>
+  <div class="right"><ul><li><a class="navlink" href="#services">Work</a></li><li><a class="navlink" href="#services">Services</a></li><li><a class="navlink" href="#studio">Studio</a></li><li><a class="navlink" href="#contact">Contact</a></li></ul>
+  <a class="btn btn--ghost" href="#contact">Start a project</a></div>
+</div></header>
+<main id="top">
+  <section class="hero wrap" aria-label="Introduction">
+    <h1>Growth,<br>engineered.</h1>
+    <p class="sub">A small studio building web, SEO, and email with craft.</p>
+    <a class="link" href="#services">See our work <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
   </section>
-  <footer><span>Pietra Nero</span><span><a href="mailto:hello@pietranero.com">hello@pietranero.com</a></span></footer>
-</div>
+  <section class="position divide" aria-label="Positioning"><div class="wrap">
+    <p class="kicker">The studio</p><h2>A studio, not a factory.</h2>
+    <p class="sub">A few brands a year, built by the partners — with care that shows.</p><div class="rule"></div>
+  </div></section>
+  <section id="services" class="divide" aria-label="What we do"><div class="wrap">
+    <p class="kicker">What we do</p><div class="cols3"><div class="svc"><svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6v20M24 26c-6 0-11 4-13 8M24 26c6 0 11 4 13 8M8 26h32"/></svg><h3>Web development</h3><p>Sites built like masonry — structurally sound, quietly beautiful, made to stand.</p></div><div class="svc"><svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="22" cy="22" r="12"/><path d="M31 31l9 9"/></svg><h3>SEO</h3><p>Foundations that compound — rankings you keep because the work underneath is real.</p></div><div class="svc"><svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="12" width="32" height="24" rx="2"/><path d="M8 15l16 12 16-12"/></svg><h3>Email</h3><p>Lifecycle programs cut precisely to your customer — every message load-bearing.</p></div></div>
+  </div></section>
+  <section class="divide" aria-label="How we work"><div class="wrap">
+    <p class="kicker">How we work</p>
+    <h2 style="font-size:clamp(28px,4vw,46px)">Quarry, cut, set, polish.</h2>
+    <div class="steps"><div class="step"><div class="num">01</div><h3>Quarry</h3><p>We study the material before we cut — a proper audit.</p></div><div class="step"><div class="num">02</div><h3>Cut</h3><p>We build it precisely, with senior hands.</p></div><div class="step"><div class="num">03</div><h3>Set</h3><p>We launch it cleanly, made to stand.</p></div><div class="step"><div class="num">04</div><h3>Polish</h3><p>We refine what already works, over time.</p></div></div>
+  </div></section>
+  <section class="divide" aria-label="The work"><div class="wrap">
+    <p class="kicker">The work</p>
+    <h2 style="font-size:clamp(28px,4vw,46px)">What we build.</h2>
+    <div class="work-grid"><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="10" width="34" height="28" rx="2"/><path d="M7 17h34M12 24h12M12 29h18"/></svg></div><h3>Websites</h3><span>Design &amp; build</span></div><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="12" width="32" height="24" rx="2"/><path d="M8 15l16 12 16-12"/></svg></div><h3>Email programs</h3><span>Lifecycle &amp; campaigns</span></div><div class="card"><div class="thumb"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="21" cy="21" r="11"/><path d="M29 29l9 9"/></svg></div><h3>SEO foundations</h3><span>Technical &amp; content</span></div></div>
+  </div></section>
+  <section id="studio" class="partners divide" aria-label="Who you work with"><div class="wrap">
+    <p class="kicker">Who you work with</p>
+    <h2 style="font-size:clamp(28px,4vw,46px)">You work with the partners. Every time.</h2>
+    <div class="ppl"><div class="person"><span class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="18" r="9"/><path d="M8 44c1-9 8-14 16-14s15 5 16 14z"/></svg></span><div><h3>Marco Neri</h3><span>Founder</span></div></div><div class="person"><span class="avatar" aria-hidden="true"><svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="18" r="9"/><path d="M8 44c1-9 8-14 16-14s15 5 16 14z"/></svg></span><div><h3>Elena Ricci</h3><span>Partner</span></div></div></div>
+    <p class="foot">The partners are on your project from the first sketch to the last detail.</p>
+  </div></section>
+  <section class="faq divide" aria-label="FAQ"><div class="wrap">
+    <p class="kicker">Good questions</p><h2>The things people ask.</h2>
+    <div class="acc"><details><summary>Do you work with our platform?<span class="pm">+</span></summary><div class="body">Almost certainly. We work across the common website, email, and commerce platforms, and we'll tell you plainly if something isn't a good fit.</div></details><details><summary>How do you price?<span class="pm">+</span></summary><div class="body">Fixed-scope projects and monthly retainers, quoted up front. No surprise invoices.</div></details><details><summary>How many projects do you take on?<span class="pm">+</span></summary><div class="body">Deliberately few, so the partners stay on your project rather than handing it off.</div></details><details><summary>What does a typical timeline look like?<span class="pm">+</span></summary><div class="body">Most builds run four to twelve weeks to launch, then an ongoing refine cycle.</div></details></div>
+  </div></section>
+  <section id="contact" class="closing divide" aria-label="Contact"><div class="wrap">
+    <h2>Build something that lasts.</h2>
+    <a class="btn btn--ghost" href="mailto:hello@pietranero.com">Start a project</a>
+    <p class="email"><a href="mailto:hello@pietranero.com">hello@pietranero.com</a></p>
+  </div></section>
+</main>
+<footer>
+  <div class="wrap foot-grid">
+    <a class="brand" href="#top">Pietra Nero</a>
+    <div class="fcol"><h4>Studio</h4><a href="#services">Work</a><a href="#services">Services</a><a href="#studio">Studio</a></div>
+    <div class="fcol"><h4>More</h4><a href="#studio">About</a><a href="#contact">Contact</a><a href="#">Privacy</a></div>
+    <a class="btn btn--ghost" href="#contact">Start a project</a>
+  </div>
+  <div class="wrap legal"><span>Pietra Nero — Growth, engineered.</span><span>&copy; 2026 Pietra Nero</span></div>
+</footer>
+<script>
+  var hdr=document.getElementById('hdr');
+  var f=function(){hdr.classList.toggle('scrolled',window.scrollY>8)};f();
+  window.addEventListener('scroll',f,{passive:true});
+</script>
 </body>
 </html>
